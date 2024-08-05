@@ -1,0 +1,118 @@
+.logo{
+    margin: 10px;
+    cursor: pointer;
+}
+.navbar{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 10px;
+}
+.navbar-left{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-left a{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    font-size: large;
+}
+.navbar-menu li{
+    cursor: pointer;
+}
+
+.navbar-right{
+    display: flex;
+    gap: 40px;
+    margin-right: 16px;
+}
+.navbar button{
+    width: 80px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: transparent;
+    font-size: 14px;
+}
+.navbar button:hover{
+background-color: black;
+color: white;
+}
+.search-icon{
+    cursor: pointer;
+}
+.basket{
+    cursor: pointer;
+}
+.navbar .active{
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.navbar-search-icon{
+    position: relative;
+}
+.navbar-search-icon .dot{
+    position: absolute;
+    min-height: 10px;
+    min-width: 10px;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+}
+@media (max-width:1050px){
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap:20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+    }
+}
+@media (max-width:900px){
+    .navbar .logo{
+        width: 120px;
+    }
+    .navbar-menu{
+        gap:15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        padding: 7px;
+        font-size: 15px;
+    }
+}
+@media (max-width:800px){
+   
+    .navbar-menu{
+      display: none;
+    }
+
+}

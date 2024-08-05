@@ -1,0 +1,48 @@
+.loginform{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color:#00000090;
+    display: grid;
+}
+.loginpopup-container{
+    place-self: center;
+    width: max(25vw,330px);
+    height:400px;
+    color: #808080;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.7s;
+}
+.form-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+}
+.form-title p{
+    font-size: 2.4rem;
+    font-weight: 900;
+}
+.form-title img{
+    cursor: pointer;
+    width: 24px;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 2px;
+    text-align: center;
+}
+.form-title img:hover{
+    transform: scale(1.1);
+}
+.login-popup-inputs{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
