@@ -49,3 +49,9 @@
     height: 1px;
     margin: 20px 0;
 }
+@media(max-width:800px){
+.footer-content{
+    display: flex;
+    flex-direction: column;
+}
+}

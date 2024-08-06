@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./LoginPopup.css"
 import { assets } from "../../assets/assets";
+import { motion } from "framer-motion";
 
 const LoginPopup = ({setlogin}) => {
     const [title,SetTitle] = useState("Sign Up")
@@ -14,19 +15,19 @@ const LoginPopup = ({setlogin}) => {
             </div>
             <div className="login-popup-inputs">
                 {title==="Login" ? <></> :
-                <input type="text" placeholder="Enter your name" name="name" id="name" required/>
+                <input type="text" placeholder="Your Name" name="name" id="name" required/>
                 }
-                <input type="email" name="email" id="email" placeholder="xyz@gmail.com" required/>
-                <input type="password" name="password" id="password" placeholder="Enter a strong password" required/>
+                <input type="email" name="email" id="email" placeholder="Your Email" required/>
+                <input type="password" name="password" id="password" placeholder="Your Password" required/>
             </div>
-            <button type="submit">{title==="Sign Up"?"Create Account":"Login"}</button>
+            <motion.button whileTap={{scale:0.9}} type="submit">{title==="Sign Up"?"Create Account":"Login"}</motion.button>
             <div className="login-popup-condition">
                 <input type="checkbox" name="" id="" required/>
-                <p>By Continuing , I agree on all the above terms and condition</p>
+                <p>By clicking on this , I agree on all the above terms and conditions.</p>
             </div>
             {title==="Login"
             ?<p>Create a new account ? <span onClick={()=>SetTitle("Sign Up")}>Click Here</span></p>
-            : <p>Already have an account ? <span onClick={()=>SetTitle("Login")}>Login</span></p>
+            : <p>Already have an account ? <span onClick={()=>SetTitle("Login")}>Login Here</span></p>
             }
          </form>
         </div>

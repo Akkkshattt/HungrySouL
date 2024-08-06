@@ -9,7 +9,7 @@
 .loginpopup-container{
     place-self: center;
     width: max(25vw,330px);
-    height:400px;
+    /* height:400px; */
     color: #808080;
     background-color: white;
     display: flex;
@@ -44,5 +44,32 @@
 .login-popup-inputs{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
+    gap: 20px;
+}
+.login-popup-inputs input{
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+.loginpopup-container button{
+    border: none;
+    padding: 10px;
+    border-radius:10px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.login-popup-condition{
+    display: flex;
+    align-items: start;
+    gap: 8px;
+}
+.login-popup-condition input{
+    cursor: pointer;
+}
+.loginpopup-container span{
+    cursor: pointer;
+    font-weight: 600;
+    color: orangered;
 }

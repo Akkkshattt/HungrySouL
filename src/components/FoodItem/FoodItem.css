@@ -63,3 +63,10 @@ margin: 10px 0;
     background-color: black;
     color: white;
 }
+@media(max-width:800px){
+    .food-item{
+        width: 80%;
+        height: 400px;
+    }
+   
+}

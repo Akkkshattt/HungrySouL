@@ -10,9 +10,9 @@ const Footer = () => {
     return (
         <div className="footer" id="footer">
             <div className="footer-content">
-                <div ckassname="footer-left">
+                <div classname="footer-left">
                     <a href='#navbar'>
-                    <img src={assets.Logo} height="70px" width="70px" alt="" />
+                    <img src={assets.Logo} className='f-image' height="70px" width="70px" alt="" />
                     </a>
                     <p>Our mission is to bring people together through delicious food and exceptional service. Order now and taste the difference!</p>
                 </div>

@@ -13,3 +13,9 @@
     gap: 30px;
     row-gap: 50px;
 }
+@media(max-width:800px){
+    .food-display h1{
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+}

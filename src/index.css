@@ -7,7 +7,7 @@
 body{
   min-height: 100vh;
   font-family:"Balsamiq Sans";
-  /* background-color: rgb(240, 235, 230); */
+  background-color: rgb(240, 235, 230);
 }
 a{
   text-decoration: none;
