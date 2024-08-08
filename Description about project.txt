@@ -21,8 +21,23 @@ Contact customers through call or online chat
 Manage payments and transaction history
 The app also includes features such as:
 
-Geolocation to find nearby restaurants and track order locations
-Multiple filters to search for restaurants and food by location, price, and reviews
-Special offers and promotions to highlight current deals
-Order history and reorder functionality to make it easy for customers to place repeat orders
-Overall, a food ordering web app provides a convenient and user-friendly platform for customers to order food online, while also providing restaurants and delivery staff with the tools they need to manage orders and deliveries efficiently.
+Backend - nodejs, express, jsonwebtoken-for authentication,mongoose-for database,bcrypt-for storing user data in encrypted form,
+          cors:for setting relation between backend and frontend,dotenv:for storing env variables,body-parser:parse data coming from user,multer:store images system,stripe:paymnent gateway,
+          validator:to check if email id and pass are valid or not,nodemon
+for testing Api i used thunderclient inbuilt extension
+
+
+Database:mongodb atlas
+
+admin :axios - create network request like get/post/edit etc
+       react-toastify- to create notification easily
+
+FLAWS :
+1 Unable to add dynamic food item in the cart //solved
+2 Image is displaying in circular form for both admin and frontend after fetching from API  //solved
+
+Future Goals:
+Pagination in explore menu part
+
+Middleware:
+before adding any item to cart first we authenticated user using jwt token 

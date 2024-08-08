@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets';
 import { FaGithub } from 'react-icons/fa6';
 import { FaLinkedin } from 'react-icons/fa6';
 import { FaFacebook } from 'react-icons/fa6';
-import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
     return (

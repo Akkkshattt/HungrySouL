@@ -33,7 +33,7 @@
 
 .navbar-right{
     display: flex;
-    gap: 40px;
+    gap:30px;
     margin-right: 16px;
 }
 .navbar button{
@@ -42,6 +42,7 @@
     cursor: pointer;
     background: transparent;
     font-size: 14px;
+    border-width: 3px;
 }
 .navbar button:hover{
 background-color: black;
@@ -49,9 +50,11 @@ color: white;
 }
 .search-icon{
     cursor: pointer;
+    width: 36px;
 }
 .basket{
     cursor: pointer;
+    width: 36px;
 }
 .navbar .active{
     font-weight: bolder;
@@ -68,6 +71,44 @@ color: white;
     top: -8px;
     right: -8px;
     background-color: red;
+}
+
+.navbar-profile{
+    position: relative;
+}
+.navbar-profile .profile{
+    width: 36px;
+    cursor: pointer;
+}
+.navbar-profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+
+}
+.navbar-profile-dropdown .profile_bag,.navbar-profile-dropdown .logout{
+    width: 18px;
+    overflow: hidden;
+}
+.navbar-profile:hover .navbar-profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 25px;
+    list-style: none;
+    border:2px solid black;
+    border-radius: 4px;
+    background-color: white;
+}
+.navbar-profile-dropdown li{
+    display: flex;
+    cursor: pointer;
+    gap: 10px;
+    align-items: center;
+}
+.navbar-profile-dropdown li p:hover{
+    color: rgb(255, 81, 0);
 }
 @media (max-width:1050px){
     .navbar .logo{
@@ -120,6 +161,20 @@ color: white;
     .navbar-right button{
         padding: 5px;
         font-size: 12px;
+        width: 70px;
+    }
+    .navbar-right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+    }
+    .navbar-right img{
+        width: 28px;
+    }
+    .navbar-profile .profile{
+        width: 28px;
+        cursor: pointer;
     }
 
 }

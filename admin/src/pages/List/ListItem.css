@@ -1,0 +1,47 @@
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.list-table-format{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 30px;
+    padding: 12px 15px;
+    border: 1px solid;
+}
+.title{
+    background-color: rgb(127, 100, 66);
+    font-weight: 900;
+}
+.list-table-format img{
+    width: 90px;
+}
+.list-table-format .cross{
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    left: 16px;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 22px;
+    text-align: center;
+}
+.list-table-format .cross:hover{
+    background-color: black;
+    color: white;
+}
+
+@media(max-width:800px){
+    .list-table-format{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+    .list-table-format img{
+        width: 70px;
+    }
+    .title{
+        display: none;
+    }
+}

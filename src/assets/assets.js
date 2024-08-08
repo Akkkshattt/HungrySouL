@@ -11,6 +11,14 @@ import menu_5 from './menu_5.png'
 import menu_6 from './menu_6.png'
 import menu_7 from './menu_7.png'
 import menu_8 from './menu_8.png'
+import g_cart from "./g_cart.png";
+import g2_cart from "./g2_cart.png";
+import search from "./search.png";
+import profile from "./profile.png"
+import bag from "./bag.png";
+import logout from "./logout.png"
+
+
 
 import food_1 from './food_1.png'
 import food_2 from './food_2.png'
@@ -81,7 +89,13 @@ export const assets = {
     profile_icon,
     logout_icon,
     bag_icon,
-    parcel_icon
+    parcel_icon,
+    g_cart,
+    g2_cart,
+    search,
+    profile,
+    bag,
+    logout
 }
 
 export const menu_list = [

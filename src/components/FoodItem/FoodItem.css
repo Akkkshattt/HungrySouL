@@ -10,6 +10,7 @@
     width: 100%;
     border-radius: 15px 15px 0px 0px;
 }
+
 .food-item-info{
     padding: 20px;
 }
@@ -24,8 +25,9 @@
     font-size: 20px;
 }
 .food-item-name-rating img{
-    width: 70px;
+    width: 60px;
 }
+
 .food-item-desc{
 font-size: 14px;
 color: rgb(72, 71, 71);

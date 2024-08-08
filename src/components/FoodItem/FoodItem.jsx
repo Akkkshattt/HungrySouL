@@ -9,12 +9,19 @@ const FoodItem = ({id,name,description,price,image}) => {
    //context api 
 //   const [itemCount,SetItemCount] = useState(0);
 //so basically this is how we will be managing state by accessing values from context store 
-  const{cartItems,addTocart,removeFromCart} = useContext(StoreContext);
+  const{cartItems,addTocart,removeFromCart,url} = useContext(StoreContext);
     
   return (
     <div className='food-item'>
         <div className="food-item-img-container">
-            <img className='food-item-img'  src={image} alt="" />
+            {/* dynmaically loading image for food item from database
+            {url+"/images/" + image ?
+             <img className='food-item-img' src={url+"/images/" + image} alt="" />
+             :
+             <></>
+            } */}
+            <img className='food-item-img'  src={url+"/images/" + image} alt="" />
+           
            {
             !cartItems[id] 
             ? <motion.img whileTap={{scale:0.8}} src={assets.add_icon_white} alt='' title='Add food item' className='add' onClick={()=>addTocart(id)}/>
@@ -25,6 +32,7 @@ const FoodItem = ({id,name,description,price,image}) => {
             </div>
            }
         </div>
+        
         <div className="food-item-info">
             <div className="food-item-name-rating">
                 <p>{name}</p>
@@ -33,6 +41,8 @@ const FoodItem = ({id,name,description,price,image}) => {
             <p className='food-item-desc'>{description}</p>
             <p className='food-item-price'>${price}</p>
         </div>
+       
+       
     </div>
   )
 }
