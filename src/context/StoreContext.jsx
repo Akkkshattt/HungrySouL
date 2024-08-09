@@ -40,14 +40,18 @@ const removeFromCart =async (itemId) =>{
 
 //loading cart data from database coz after loading page data is getting lost but since 
 // it is saved in database we can fetch it from there
+
 const loadcartData = async(token)=>{
    //we made this request post coz we wanted to pass header otherwise we could have made it get request as well
   const response  = await axios.post(url + "/api/cart/fetch",{},{headers:{token}});
   SetCartItems(response.data.cartData);
-  
 }
-useEffect(async ()=>{
-await loadcartData(localStorage.getItem("token"));
+
+//removed async await from here if any error comes do check it
+useEffect(()=>{
+if(localStorage.getItem("token")){
+ loadcartData(localStorage.getItem("token"));
+}
 },[])
 
 //logic behind calculating the total amount of money 

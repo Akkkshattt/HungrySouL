@@ -9,7 +9,7 @@ const FoodItem = ({id,name,description,price,image}) => {
    //context api 
 //   const [itemCount,SetItemCount] = useState(0);
 //so basically this is how we will be managing state by accessing values from context store 
-  const{cartItems,addTocart,removeFromCart,url} = useContext(StoreContext);
+  const{cartItems,addTocart,removeFromCart,url,token} = useContext(StoreContext);
     
   return (
     <div className='food-item'>
@@ -21,7 +21,11 @@ const FoodItem = ({id,name,description,price,image}) => {
              <></>
             } */}
             <img className='food-item-img'  src={url+"/images/" + image} alt="" />
-           
+         
+         {/* here i did conditional rendering which means add/remove icons will only only come when the user is logged 
+         in they wont appear for guest users */}
+           {token?
+           <>
            {
             !cartItems[id] 
             ? <motion.img whileTap={{scale:0.8}} src={assets.add_icon_white} alt='' title='Add food item' className='add' onClick={()=>addTocart(id)}/>
@@ -30,7 +34,10 @@ const FoodItem = ({id,name,description,price,image}) => {
                 <p>{cartItems[id]}</p>
                 <motion.img whileTap={{scale:0.8}} src={assets.add_icon_green} onClick={()=>addTocart(id)} alt="" />
             </div>
-           }
+          }
+           </>:<></>}
+           
+        
         </div>
         
         <div className="food-item-info">
