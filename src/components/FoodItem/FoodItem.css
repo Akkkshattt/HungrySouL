@@ -68,7 +68,14 @@ margin: 10px 0;
 @media(max-width:800px){
     .food-item{
         width: 80%;
-        height: 400px;
+        height: 450px;
+    }
+   
+}
+@media(max-width:600px){
+    .food-item{
+        width: 80%;
+        height: 450px;
     }
    
 }

@@ -63,3 +63,21 @@
         justify-content: center;
     }
 }
+@media (max-width:600px){
+    .header-contents{
+        max-width: 70%;
+        max-height: 70%;
+        padding-bottom: 20px;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button{
+        padding: 2vw;
+        
+        align-items: center;
+        display: flex;
+        width: 40%;
+        justify-content: center;
+    }
+}

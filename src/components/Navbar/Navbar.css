@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .navbar-left a{
     text-align: center;
     font-weight: bold;
@@ -149,6 +150,41 @@ color: white;
         padding: 7px;
         font-size: 15px;
     }
+}
+@media (max-width:800px){
+   
+    .navbar{
+        gap: 1rem;
+    }
+    .navbar-menu{
+      display: none;
+    }
+    .navbar-left{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        font-size:14px;
+    }
+   
+    .navbar-right button{
+        padding: 5px;
+        font-size: 12px;
+        width: 70px;
+    }
+    .navbar-right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .navbar-right img{
+        width: 28px;
+    }
+    .navbar-profile .profile{
+        width: 28px;
+        cursor: pointer;
+    }
+
 }
 @media (max-width:800px){
    

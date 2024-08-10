@@ -1,14 +1,14 @@
-import React, { useContext,useState } from 'react';
+import React, { useContext,useEffect,useState } from 'react';
 import "./PlaceOrder.css";
 import { motion } from 'framer-motion';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 import axios from "axios";
 
 
 const PlaceOrder = () => {
-  const { getTotalcartAmount, url,food_List,cartItems} = useContext(StoreContext);
-  // const navigate = useNavigate();
+  const { getTotalcartAmount, url,food_List,cartItems,token} = useContext(StoreContext);
+  const navigate = useNavigate();
 
   //handling state of all the data entered by user
   const [inputdata,setData] = useState({
@@ -40,6 +40,7 @@ const PlaceOrder = () => {
         iteminfo["quantity"] = cartItems[item._id];
         orderItems.push(iteminfo);
       }
+    
     })
     //console.log(orderItems);
     //fetching razorpay key which we need for payment
@@ -87,6 +88,13 @@ const PlaceOrder = () => {
   //    let totalamount = getTotalcartAmount();
   //    console.log("hi from variable",totalamount);
   // }
+
+  //checking if the cart is empty and user still tried to make a payment so redirecting him back to cart page
+  useEffect(()=>{
+   if(getTotalcartAmount()===0){
+    navigate("/cart");
+   }
+  },[token])
 
 return (
   <form className='place-order' onSubmit={paymentHandler}>

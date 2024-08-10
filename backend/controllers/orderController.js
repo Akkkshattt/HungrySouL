@@ -6,7 +6,7 @@ import { instance } from "../server.js";
 
 const placeOrder = async (req, res) => {
 
-
+   try{
     console.log(req.body);
     const newOrder = new orderModel({
         name: req.body.orderdata.userData.firstname + req.body.orderdata.userData.lastname,
@@ -32,8 +32,10 @@ const placeOrder = async (req, res) => {
     // console.log(order);
 
     res.json({ success: true, message: "Order Placed!", order })
+   }
+   catch(error){
 
-
+   }
 
     // const options = {
     //     amount:50000,  // amount in the smallest currency unit
@@ -48,13 +50,10 @@ const placeOrder = async (req, res) => {
 const paymentverification = async (req, res) => {
     console.log(req.body);
     res.redirect("http://localhost:3000/success");
-
     //after redirecting after writing this which was crashing my app and was giving me errors cannot set headers after redirecting 
     //thats why had to comment this part
-
-    //res.json({success:true});
+    // res.json({success:true});
 }
-
 
 
 export { placeOrder, paymentverification };

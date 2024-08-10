@@ -63,6 +63,7 @@ const getTotalcartAmount = () =>{
       totalAmount += iteminfo.price * cartItems[item];
     }
   }
+
   return totalAmount;
 }
 

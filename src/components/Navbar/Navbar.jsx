@@ -17,6 +17,9 @@ const Navbar = ({ setlogin }) => {
     SetToken("");
     navigate("/");
   }
+  const navgigatetoOrders = ()=>{
+    navigate("/myorders");
+  }
 
   return (
     <div className='navbar' id='navbar'>
@@ -69,7 +72,8 @@ const Navbar = ({ setlogin }) => {
             <ul className='navbar-profile-dropdown'>
               <motion.li whileTap={{ scale: 0.9 }} whileHover={{ scale: 1.1 }}>
                 <img src={assets.bag} alt="" className='profile_bag' />
-                <p>Orders</p>
+                <p onClick={navgigatetoOrders}
+                >Orders</p>
               </motion.li>
               <hr />
               <motion.li whileTap={{ scale: 0.9 }} whileHover={{ scale: 1.1 }} onClick={logout}>
