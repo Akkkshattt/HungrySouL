@@ -49,7 +49,7 @@ const placeOrder = async (req, res) => {
 //this route is running because of callback url
 const paymentverification = async (req, res) => {
     console.log(req.body);
-    res.redirect("http://localhost:3000/success");
+    res.redirect("https://hungrysoull-7qulqexw9-akkkshattts-projects.vercel.app//success");
     //after redirecting after writing this which was crashing my app and was giving me errors cannot set headers after redirecting 
     //thats why had to comment this part
     // res.json({success:true});
